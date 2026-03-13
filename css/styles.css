@@ -1088,10 +1088,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   overflow: hidden;
 }
 .ig-cell img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
 }
 .ig-cell::after {
