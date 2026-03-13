@@ -1094,11 +1094,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   z-index: 1;
 }
-.ig-cell:not(:has(img))::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--gold-pale) 0%, var(--cream-darker) 100%);
+.ig-cell::after {
+  display: none;
 }
 .ig-cell:hover { transform: scale(1.03); opacity: 0.85; }
 
