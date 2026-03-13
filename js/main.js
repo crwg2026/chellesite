@@ -1,11 +1,11 @@
 /* =============================================================================
-   UNTWINE ATELIER — Main JavaScript
+   UNTWINE ATELIER â Main JavaScript
    ============================================================================= */
 
 (function () {
   'use strict';
 
-  // ─── NAVBAR: scroll state ───────────────────────────────────────────────────
+  // âââ NAVBAR: scroll state âââââââââââââââââââââââââââââââââââââââââââââââââââ
   const navbar = document.getElementById('navbar');
   let lastScroll = 0;
 
@@ -19,7 +19,7 @@
   onScroll();
 
 
-  // ─── MOBILE NAV: toggle ─────────────────────────────────────────────────────
+  // âââ MOBILE NAV: toggle âââââââââââââââââââââââââââââââââââââââââââââââââââââ
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
 
@@ -43,7 +43,7 @@
   }
 
 
-  // ─── SCROLL REVEAL ──────────────────────────────────────────────────────────
+  // âââ SCROLL REVEAL ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
   const revealEls = document.querySelectorAll('.reveal-up');
 
   const revealObserver = new IntersectionObserver(
@@ -67,7 +67,7 @@
   }
 
 
-  // ─── FAQ ACCORDION ──────────────────────────────────────────────────────────
+  // âââ FAQ ACCORDION ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
@@ -123,7 +123,7 @@
   });
 
 
-  // ─── ACTIVE NAV LINK: highlight on scroll ───────────────────────────────────
+  // âââ ACTIVE NAV LINK: highlight on scroll âââââââââââââââââââââââââââââââââââ
   const sections  = document.querySelectorAll('section[id], div[id]');
   const navAnchors = document.querySelectorAll('.nav-link');
 
@@ -144,7 +144,7 @@
   sections.forEach(s => sectionObserver.observe(s));
 
 
-  // ─── HERO PARALLAX (subtle, desktop only) ───────────────────────────────────
+  // âââ HERO PARALLAX (subtle, desktop only) âââââââââââââââââââââââââââââââââââ
   const heroHeadline = document.querySelector('.hero-headline');
   const heroSub      = document.querySelector('.hero-sub');
 
@@ -160,7 +160,7 @@
   }
 
 
-  // ─── CURSOR: gold dot on hover over CTAs (desktop only) ─────────────────────
+  // âââ CURSOR: gold dot on hover over CTAs (desktop only) âââââââââââââââââââââ
   if (window.matchMedia('(pointer: fine)').matches) {
     const cursor = document.createElement('div');
     cursor.style.cssText = `
@@ -198,7 +198,7 @@
   }
 
 
-  // ─── MARQUEE: pause on hover ─────────────────────────────────────────────────
+  // âââ MARQUEE: pause on hover âââââââââââââââââââââââââââââââââââââââââââââââââ
   const marqueeSection = document.querySelector('.marquee-section');
   const marqueeTrack   = document.querySelector('.marquee-track');
   if (marqueeSection && marqueeTrack) {
@@ -211,7 +211,7 @@
   }
 
 
-  // ─── SMOOTH ANCHOR: ensure mobile offset ────────────────────────────────────
+  // âââ SMOOTH ANCHOR: ensure mobile offset ââââââââââââââââââââââââââââââââââââ
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const id  = anchor.getAttribute('href').slice(1);
@@ -223,5 +223,22 @@
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  /* âââ Booking form: set min date to today âââââââââââââââââââââââââââââââââââ */
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+
+  /* âââ Show success message after FormSubmit redirect âââââââââââââââââââââââ */
+  if (window.location.hash === '#booking-success') {
+    const form = document.getElementById('booking-form');
+    const success = document.getElementById('booking-success');
+    if (form && success) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  }
 
 })();
