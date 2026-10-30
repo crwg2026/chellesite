@@ -1,0 +1,17 @@
+name: Rename homepage
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename uploaded homepage to index.html
+        run: |
+          git config user.name "crwg2026"
+          git config user.email "crwg2026@users.noreply.github.com"
+          git mv untwine-atelier-sample-website.html index.html
+          git commit -m "Rename untwine-atelier-sample-website.html to index.html"
+          git push
