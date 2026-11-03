@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://untwinehair.com/</loc>
-  </url>
-  <url>
-    <loc>https://untwinehair.com/terms-of-service.html</loc>
-  </url>
-  <url>
-    <loc>https://untwinehair.com/privacy-policy.html</loc>
-  </url>
+  <url><loc>https://untwinehair.com/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/services.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/faq.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/journal.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/how-to-take-down-braids-without-breakage.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/how-long-can-you-keep-braids-in.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/loc-comb-out-101.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/diy-vs-professional-braid-takedown.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/after-takedown-first-week-care-routine.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/terms-of-service.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://untwinehair.com/privacy-policy.html</loc><lastmod>2026-11-03</lastmod></url>
 </urlset>
